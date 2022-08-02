@@ -6,7 +6,7 @@ public class ControlaCamera : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject Jogador;
-    Vector3 distanciaCompensar;
+    private Vector3 distanciaCompensar;
     void Start()
     {
         distanciaCompensar = transform.position - Jogador.transform.position;
