@@ -13,6 +13,7 @@ public class ControlaJogador : MonoBehaviour
     private Animator animatorJogador;
     public int Vida = 100;
     public ControlaInterface scriptControlaInterface;
+    public AudioClip SomDeDano;
     // Update is called once per frame
 
     private void Start()
@@ -78,6 +79,8 @@ public class ControlaJogador : MonoBehaviour
         Vida -= dano;
 
         scriptControlaInterface.AtualizarSliderVidaJogador();
+
+        ControlaAudio.instancia.PlayOneShot(SomDeDano);
 
         if (Vida <= 0)
         {
